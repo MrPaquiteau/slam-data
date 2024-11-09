@@ -86,7 +86,7 @@ Before you start, ensure you have the following installed:
 To get started, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/SlamData.git
+git clone https://github.com/MrPaquiteau/SlamData.git
 cd SlamData
 ```
 
