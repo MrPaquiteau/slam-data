@@ -1,0 +1,172 @@
+body, html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.slam-container {
+    display: grid;
+    place-items: center;
+}
+
+.slam-card {
+    display: flex;
+    align-items: center;
+    margin: 5px; /* Marge entre les cartes */
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.slam-info {
+    display: flex;
+    align-items: center; /* Centrer verticalement les éléments internes */
+    margin-bottom: 10px; /* Espace entre les logos et les trophées */
+}
+
+.slam-info img {
+    width: 70px; /* Taille des logos */
+    height: 70px;
+    margin-right: 10px; /* Espace entre le logo et les trophées */
+}
+
+.slam-trophies img {
+    width: 60px; /* Taille des trophées */
+    height: 70px;
+    margin-right: 5px; /* Espace entre les trophées */
+}
+
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #061123;
+    color: white; /* Couleur du texte */
+    padding: 22px; /* Espacement intérieur */
+    text-align: center; /* Centrer les éléments de la barre de navigation horizontalement */
+    font-family: 'Futura', sans-serif; /* Utilisation d'une police stylée */
+    font-size: 20px; /* Taille de la police */
+}
+
+.navbar ul {
+    list-style-type: none; /* Supprime les puces des listes */
+    margin: 0;
+    padding: 5px;
+}
+
+.navbar li {
+    display: inline-block; /* Afficher les éléments de la liste en ligne */
+    margin-right: 10px; /* Espacement entre les éléments */
+}
+
+.navbar a {
+    color: white; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    padding: 5px; /* Espacement intérieur des liens */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-child a {
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Espacement entre le texte et l'image */
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.dropdown-child a img {
+    margin-left: 10px; /* Espacement entre l'image et le texte */
+}
+
+.dropdown-child {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 8px; /* Ajouter des bordures arrondies */
+}
+
+.dropdown-child a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+.dropbtn::after {
+    content: '\25BE'; /* Code Unicode pour la flèche vers le bas */
+    margin-left: 5px; /* Espacement entre le texte et la flèche */
+}
+
+.dropbtn:hover::after {
+    content: '\25B4'; /* Flèche vers le haut au survol */
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #222222;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    text-align: center;
+
+}
+
+th {
+    background-color: #061123;
+    font-weight: bold;
+    color:#F2F2F2;
+}
+
+.td_slam img {
+    vertical-align: middle;
+    display: inline-block;
+    width: 50px; /* Taille des logos */
+    height: 50px;
+}
+
+.td_champ img{
+    width: 40px; /* Taille des logos */
+    height: 48px;
+    vertical-align: middle;
+}
+
+tr:nth-child(even) {
+    background-color: #ECECEC;
+}
+
+tr:hover {
+    background-color: #DDDDDD;
+}
+
+.win {
+    background-color: rgba(81, 243, 81, 0.418);
+}
+
+.loose {
+    background-color: rgba(243, 86, 81, 0.418);
+}
+
+h1 {
+    margin: 2%;
+}

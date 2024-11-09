@@ -1,0 +1,182 @@
+/* Éléments communs à tous les thèmes */
+
+body, html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2F2; 
+}
+
+h1 {
+    color: #222222;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 img {
+    margin-left: 10px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #222222;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    text-align: center;
+}
+
+th {
+    color: #F2F2F2;
+    font-weight: bold;
+}
+
+td img {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 5px;
+    width: 30px;
+    height: 35px;
+}
+
+tr:nth-child(even) {
+    background-color: #ECECEC;
+}
+
+tr:hover {
+    background-color: #DDDDDD;
+}
+
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 22px;
+    text-align: center;
+    font-family: 'Futura', sans-serif;
+    font-size: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-child a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.dropdown-child a img {
+    margin-left: 10px;
+}
+
+.dropdown-child {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.dropdown-child a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+.dropbtn::after {
+    content: '\25BE';
+    margin-left: 5px;
+}
+
+.dropbtn:hover::after {
+    content: '\25B4';
+}
+
+/* Thème AO */
+
+.theme-AO th {
+    background-color: #1891d0;
+    color:#ffffff
+}
+
+.theme-AO .navbar {
+    background-color: #1891d0;
+}
+
+/* Thème RG */
+
+
+
+.theme-RG th {
+    background-color: #06482f;
+    color:#ffffff
+}
+
+.theme-RG .navbar {
+    background-color: #d35121;
+}
+
+
+/* Thème USO */
+
+.theme-USO th {
+    background-color: #FFC400;
+    color: #222222;
+}
+
+.theme-USO .navbar {
+    background-color: #00205B;
+}
+
+/* Thème WIM */
+
+
+.theme-WIM th {
+    background-color: #451e81;
+    color:#ffffff
+}
+
+.theme-WIM .navbar {
+    background-color: #016935; /* Fond semi-transparent pour la barre de navigation */
+}

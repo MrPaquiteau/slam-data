@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slam Data</title>
+  <link rel="stylesheet" type="text/css" href="./css/about.css">
+</head>
+
+<body>
+  <div class="image-container">
+    <img src="./img/back.jpeg" alt="" width="1920" height="1080">
+    <div class="image-text1">
+      <h1>Project Presentation: Tennis Grand Slam Results Web Platform</h1>
+      <p>The goal of this project is to develop a website centered around an engaging topic. We have chosen to focus on the results of various tennis tournaments.</p>
+      <p>Additionally, our objective is to integrate the data into a PhpMyAdmin database, enabling us to perform various tasks:</p>
+      <ul>
+        <li>A data exploration section, utilizing OLAP operators, for example (featured on our website in the "Achievements" section).</li>
+        <li>A data integration section, where tasks such as adding a match or a player can be carried out.</li>
+      </ul>
+      
+      <h1>Our Data Source</h1>
+      <p>We have sourced all of our data from a single platform: "Kaggle." We have also verified the accuracy of the data to ensure its reliability before integration.</p>
+      
+    </div>
+    <div class="image-text2">
+      TROILLARD Romain | VAN-ROBAYS Adrien
+    </div>
+  </div>
+  <nav class="navbar">
+    <ul class="navbar__menu">
+      <li>
+        <a href="./index.html">Home</a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Slams</a>
+        <div class="dropdown-child">
+          <a href="./slams.php?slam=AO">Australian Open <img src="./img/AO.png" alt="" width="50" height="50"></a>
+          <a href="./slams.php?slam=RG">Roland-Garros <img src="./img/RG.png" alt="" width="50" height="50"></a>
+          <a href="./slams.php?slam=WIM">Wimbledon <img src="./img/WIM.png" alt="" width="50" height="50"></a>
+          <a href="./slams.php?slam=USO">US Open <img src="./img/USO.png" alt="" width="50" height="50"></a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Forms</a>
+        <div class="dropdown-child">
+          <a href="./forms/insert_player_form.php">Add New Player </a>
+          <a href="./forms/insert_match_form.php">Add New Result </a>
+          <a href="./forms/player_achievements_form.php">Player's Record</a>
+        </div>
+      </li>
+      <li>
+        <a href="about.html">About</a>
+      </li>
+    </ul>
+  </nav>
+
+</body>
+
+</html>

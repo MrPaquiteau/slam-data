@@ -1,0 +1,132 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative; /* Position relative pour le positionnement absolu du texte */
+    width: 100vw; /* Prendre toute la largeur de la fenêtre */
+    height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Empêcher le débordement de l'image */
+}
+
+.image-container img {
+    min-width: 101%;
+    min-height: 101%;
+    max-width: 101%;
+    max-height: 101%;
+    filter: blur(4px);
+}
+
+.image-text1 {
+    position: absolute; /* Position absolue pour le positionnement du texte */
+    top: 30%; /* Centrage vertical */
+    left: 50%; /* Centrage horizontal */
+    transform: translate(-50%, -50%); /* Décalage de 50% du texte */
+    color: rgb(255, 255, 255); /* Couleur du texte */
+    font-size: 50px; /* Taille de la police */
+    text-align: center; /* Alignement du texte au centre */
+    font-family: 'Futura', sans-serif; /* Utilisation d'une police stylée */
+    border: 2px solid white; /* Bordure blanche de 2 pixels */
+    padding: 10px; /* Espacement intérieur de 10 pixels */
+    border-radius: 10px; /* Bords arrondis de 10 pixels */
+}
+
+.image-text2 {
+    position: absolute; /* Position absolue pour le positionnement du texte */
+    top: 98%; /* Centrage vertical */
+    left: 50%; /* Centrage horizontal */
+    transform: translate(-50%, -50%); /* Décalage de 50% du texte */
+    color: rgba(255, 255, 255, 0.7); /* Couleur du texte */
+    font-size: 16px; /* Taille de la police */
+    text-align: center; /* Alignement du texte au centre */
+    font-family: 'Futura', sans-serif; /* Utilisation d'une police stylée */
+    padding: 0;
+    margin: 0;
+    text-decoration: underline; /* Souligner le texte */
+
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour la barre de navigation */
+    color: rgb(255, 255, 255); /* Couleur du texte */
+    padding: 22px; /* Espacement intérieur */
+    text-align: center; /* Centrer les éléments de la barre de navigation horizontalement */
+    font-family: 'Futura', sans-serif; /* Utilisation d'une police stylée */
+    font-size: 20px; /* Taille de la police */
+    
+}
+
+.navbar ul {
+    list-style-type: none; /* Supprime les puces des listes */
+    margin: 0;
+    padding: 5px;
+}
+
+.navbar li {
+    display: inline-block; /* Afficher les éléments de la liste en ligne */
+    margin-right: 10px; /* Espacement entre les éléments */
+}
+
+.navbar a {
+    color: white; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    padding: 5px; /* Espacement intérieur des liens */
+}
+
+/* CSS pour le dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-child a {
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Espacement entre le texte et l'image */
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.dropdown-child a img {
+    margin-left: 10px; /* Espacement entre l'image et le texte */
+}
+
+.dropdown-child {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 8px; /* Ajouter des bordures arrondies */
+}
+
+.dropdown-child a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+.dropbtn::after {
+    content: '\25BE'; /* Code Unicode pour la flèche vers le bas */
+    margin-left: 5px; /* Espacement entre le texte et la flèche */
+}
+
+.dropbtn:hover::after {
+    content: '\25B4'; /* Flèche vers le haut au survol */
+}

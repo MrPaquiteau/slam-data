@@ -1,0 +1,170 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+button[type="reset"]:hover {
+    background-color: #f44336;
+}
+
+button,
+select {
+    transition: all 0.3s ease;
+}
+
+button:focus,
+select:focus {
+    outline: none;
+}
+
+.slam_head {
+    text-align: center; /* Pour centrer les éléments à l'intérieur de la div */
+    margin: 30px;
+}
+
+.slam_head img {
+    margin-right: 10px; /* Ajoute de l'espace à droite de chaque image */
+    margin-left: 10px;
+}
+
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #061123;
+    color: white; /* Couleur du texte */
+    padding: 22px; /* Espacement intérieur */
+    text-align: center; /* Centrer les éléments de la barre de navigation horizontalement */
+    font-family: 'Futura', sans-serif; /* Utilisation d'une police stylée */
+    font-size: 20px; /* Taille de la police */
+}
+
+.navbar ul {
+    list-style-type: none; /* Supprime les puces des listes */
+    margin: 0;
+    padding: 5px;
+}
+
+.navbar li {
+    display: inline-block; /* Afficher les éléments de la liste en ligne */
+    margin-right: 10px; /* Espacement entre les éléments */
+}
+
+.navbar a {
+    color: white; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    padding: 5px; /* Espacement intérieur des liens */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-child a {
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Espacement entre le texte et l'image */
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.dropdown-child a img {
+    margin-left: 10px; /* Espacement entre l'image et le texte */
+}
+
+.dropdown-child {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 8px; /* Ajouter des bordures arrondies */
+}
+
+.dropdown-child a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+.dropbtn::after {
+    content: '\25BE'; /* Code Unicode pour la flèche vers le bas */
+    margin-left: 5px; /* Espacement entre le texte et la flèche */
+}
+
+.dropbtn:hover::after {
+    content: '\25B4'; /* Flèche vers le haut au survol */
+}
+
+/* Ajoute de l'espace entre les éléments du formulaire */
+
+/* Ajoute de l'espace entre les labels et les champs de saisie */
+label, input, select, button {
+    display: block; /* Affiche chaque élément sur une ligne distincte */
+    margin-bottom: 10px; /* Ajoute de l'espace en bas de chaque élément */
+}
+
+h1 {
+    margin-top: 2%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
