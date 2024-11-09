@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : ven. 08 nov. 2024 à 22:46
+-- Généré le : sam. 09 nov. 2024 à 13:12
 -- Version du serveur : 5.7.24
 -- Version de PHP : 8.3.1
 
@@ -712,7 +712,7 @@ INSERT INTO `tournament` (`slam_year`, `slam_ref`, `Champion`, `Seed_Champion`, 
 --
 DROP TABLE IF EXISTS `achievements`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `achievements`  AS SELECT ifnull(`t`.`slam_ref`,'TOTAL') AS `slam_ref`, count(0) AS `Total_Wins` FROM (`tournament` `t` join `player` `p1` on((`p1`.`Id` = `t`.`Champion`))) WHERE (concat(`p1`.`first_name`,' ',`p1`.`last_name`) = 'Andrés Gómez') GROUP BY `t`.`slam_ref` with rollup  ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `achievements`  AS SELECT ifnull(`t`.`slam_ref`,'TOTAL') AS `slam_ref`, count(0) AS `Total_Wins` FROM (`tournament` `t` join `player` `p1` on((`p1`.`Id` = `t`.`Champion`))) WHERE (concat(`p1`.`first_name`,' ',`p1`.`last_name`) = 'Roger Federer') GROUP BY `t`.`slam_ref` with rollup  ;
 
 --
 -- Index pour les tables déchargées
