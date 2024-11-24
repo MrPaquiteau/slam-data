@@ -1,4 +1,4 @@
-<h1 align="center">Tennis Grand Slam Results Web Platform
+<h1 align="center">🎾Tennis Grand Slam Results Web Platform
 
 ## Project Overview
 
