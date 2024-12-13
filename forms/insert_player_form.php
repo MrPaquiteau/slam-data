@@ -1,6 +1,6 @@
 <?php
 require "../connectDB.php";
-$sql = "SELECT Label FROM Country ORDER BY Label ASC";
+$sql = "SELECT Label FROM country ORDER BY Label ASC";
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute();

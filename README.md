@@ -1,5 +1,27 @@
 <h1 align="center">🎾Tennis Grand Slam Results Web Platform
 
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Data Source](#data-source)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+  - [Option 1: With Docker](#option-1-with-docker)
+  - [Option 2: Without Docker](#option-2-without-docker)
+- [Installation](#installation)
+  - [Clone the Repository](#1-clone-the-repository)
+  - [Installation Methods](#2-installation-methods)
+    - [Option A: Docker Installation](#option-a-docker-installation)
+    - [Option B: Local Server Installation](#option-b-local-server-installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
+- [Contributors](#contributors)
+
 ## Project Overview
 
 The objective of this project is to develop a web platform dedicated to displaying and managing the results of various tennis Grand Slam tournaments. This platform will offer several features, including the ability to consult detailed data, analyze player performance, and add new data such as match results and player profiles.
@@ -29,6 +51,10 @@ All the data used in this project has been sourced from the platform **Kaggle**.
   
 - **Database**: 
   - MySQL
+
+- **Containerization**:
+  - Docker
+  - Docker Compose
 
 - **Data Source**: 
   - Kaggle
@@ -65,54 +91,64 @@ All the data used in this project has been sourced from the platform **Kaggle**.
  ┃ ┣ 🖼️USOT.svg.png
  ┃ ┣ 🖼️WIM.png
  ┃ ┗ 🖼️WIMT.svg.png
+ ┣ 📂config
+ ┃ ┗ 📜my.cnf
  ┣ 🌐about.html
  ┣ 🐘connectDB.php
  ┣ 🌐index.html
  ┣ 📜README.md
+ ┣ 🐋docker-compose.yaml
+ ┣ 🐋Dockerfile
  ┗ 🐘slams.php
 ```
 
-## Setup
+## Prerequisites
 
-### Prerequisites
+- A modern web browser
 
-Before you start, ensure you have the following installed:
+### Option 1: With Docker
+- Docker installed on your system
 
-- **XAMPP/WAMP/MAMP** (or any local web server) to run PHP and manage MySQL databases.
-- **A modern browser** to view the site (Chrome, Firefox, etc.).
+### Option 2: Without Docker
+- XAMPP, WAMP, or MAMP
+
+## Installation
 
 ### 1. Clone the Repository
 
-To get started, clone the repository to your local machine:
-
 ```bash
 git clone https://github.com/MrPaquiteau/slam-data.git
-cd SlamData
+cd slam-data
 ```
 
-### 2. Create the Database
+### 2. Installation Methods
 
-Next, you need to create the database using the provided `slamdata.sql` file. This file contains all the necessary SQL commands to set up the database schema and populate it with initial data.
+#### Option A: Docker Installation
 
-1. Open your database management tool (e.g., phpMyAdmin if you are using XAMPP/WAMP/MAMP).
-2. Create a new database named `slamdata`.
-3. Import the `slamdata.sql` file into the newly created database.
+```bash
+docker-compose up --build
+```
 
-### 3. Configure the Application
+Access the application at `http://localhost:8080`
 
-You must configure the application to connect to your database. Open the file `connectDB.php` and change the settings as needed
+#### Option B: Local Server Installation
 
-### 4. Start the Local Server
+1. Create Database
+   - Open phpMyAdmin
+   - Create a database named `slamdata`
+   - Import the `slamdata.sql` file
 
-Start your local web server (XAMPP/WAMP/MAMP) and ensure that both Apache and MySQL services are running.
+2. Connection Configuration
+   - Modify `connectDB.php` with your connection parameters
 
-### 5. Access the Application
+3. Move the Project
+   - Copy the `slam-data` folder to your web server's root directory (e.g., `htdocs`)
 
-Open your web browser and navigate to `http://localhost/SlamData` to access the application.
+4. Start Local Server
+   - Launch Apache and MySQL services
 
-### 6. Add New Data
-
-You can add new data such as match results and player profiles through the provided interface in the application.
+5. Access the Application
+   - Open `http://localhost/slam-data` in your browser
 
 ## Usage
 
@@ -121,3 +157,15 @@ Once the setup is complete, you can start using the application to view and mana
 ## Contributing
 
 If you would like to contribute to this project, please fork the repository and submit a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Romain TROILLARD
+
+## Contributors
+
+- Adrien VAN-ROBAYS

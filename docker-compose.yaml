@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    container_name: slamdata_web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - slamdata_network
+
+  db:
+    image: mysql:8.0
+    container_name: slamdata_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: slamdata
+      MYSQL_USER: slamuser
+      MYSQL_PASSWORD: slampassword
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./data/slamdata.sql:/docker-entrypoint-initdb.d/slamdata.sql
+    networks:
+      - slamdata_network
+
+volumes:
+  db_data:
+
+networks:
+  slamdata_network:

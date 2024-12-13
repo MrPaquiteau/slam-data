@@ -1,20 +1,20 @@
 <?php
 require "../connectDB.php";
-$sql = "SELECT DISTINCT CONCAT(p.first_name, ' ', p.last_name) AS Player_Name 
-        FROM Player p
+$sqlPlayer = "SELECT DISTINCT CONCAT(p.first_name, ' ', p.last_name) AS Player_Name 
+        FROM player p
         ORDER BY `Player_Name` ASC";
 
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-$all_players = $stmt->fetchAll(PDO::FETCH_COLUMN);
+$stmtPlayer = $pdo->prepare($sqlPlayer);
+$stmtPlayer->execute();
+$all_players = $stmtPlayer->fetchAll(PDO::FETCH_COLUMN);
 
-$sql2 = "SELECT s.Name
-        FROM Slam s
+$sqlSlam = "SELECT s.Name
+        FROM slam s
         ORDER BY FIELD(Code, 'AO', 'RG', 'WIM', 'USO')";
 
-$stmt2 = $pdo->prepare($sql2);
-$stmt2->execute();
-$slams = $stmt2->fetchAll(PDO::FETCH_COLUMN);
+$stmtSlam = $pdo->prepare($sqlSlam);
+$stmtSlam->execute();
+$slams = $stmtSlam->fetchAll(PDO::FETCH_COLUMN);
 ?>
 
 <html>
@@ -23,7 +23,7 @@ $slams = $stmt2->fetchAll(PDO::FETCH_COLUMN);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slam Data</title>
-    <link rel="stylesheet" type="text/css" href="./player_form.css">
+    <link rel="stylesheet" type="text/css" href="../css/player_form.css">
 </head>
 
 <body>

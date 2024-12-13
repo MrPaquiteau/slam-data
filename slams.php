@@ -100,13 +100,13 @@ if (isset($_GET['slam']) && array_key_exists($_GET['slam'], $slams)) {
                     t.slam_year,
                     t.Final_Score
                 FROM
-                    Tournament t
+                    tournament t
                 JOIN
-                    Player p1 ON t.Champion = p1.Id
+                    player p1 ON t.Champion = p1.Id
                 JOIN
-                    Player p2 ON t.Runner_up = p2.Id
+                    player p2 ON t.Runner_up = p2.Id
                 JOIN 
-                    Slam s ON s.Code = t.slam_ref
+                    slam s ON s.Code = t.slam_ref
                 WHERE s.Name = :slamName
                 ORDER BY t.slam_year DESC";
 

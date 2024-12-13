@@ -1,8 +1,8 @@
 <?php
 require "../connectDB.php";
 $sql = "SELECT DISTINCT CONCAT(p.first_name, ' ', p.last_name) AS Player_Name 
-        FROM Player p
-        JOIN Tournament t ON t.Champion = p.Id
+        FROM player p
+        JOIN tournament t ON t.Champion = p.Id
         ORDER BY `Player_Name` ASC";
 
 $stmt = $pdo->prepare($sql);

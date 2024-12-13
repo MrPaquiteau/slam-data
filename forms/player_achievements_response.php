@@ -4,10 +4,10 @@ require "../connectDB.php";
 // REQUETE PALMARES
 $Player = $_POST['player_choice'];
 
-$sql = "CREATE OR REPLACE VIEW Achievements AS 
+$sql = "CREATE OR REPLACE VIEW achievements AS 
         SELECT IFNULL(t.slam_ref, 'TOTAL') AS slam_ref, COUNT(*) AS Total_Wins 
-        FROM Tournament t
-        JOIN Player p1 ON p1.Id = t.Champion 
+        FROM tournament t
+        JOIN player p1 ON p1.Id = t.Champion 
         WHERE CONCAT(p1.first_name, ' ', p1.last_name) = ?
         GROUP BY t.slam_ref WITH ROLLUP";
 
@@ -15,7 +15,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindValue(1, $Player);
 $stmt->execute();
 
-$sql = "SELECT * FROM Achievements
+$sql = "SELECT * FROM achievements
         ORDER BY FIELD(slam_ref, 'AO', 'RG', 'WIM', 'USO', 'TOTAL')";
 
 $stmt = $pdo->prepare($sql);
@@ -30,13 +30,13 @@ $sql2 = "SELECT
             t.Final_Score,
             t.slam_ref
         FROM
-            Tournament t
+            tournament t
         JOIN
-            Player p1 ON t.Champion = p1.Id
+            player p1 ON t.Champion = p1.Id
         JOIN
-            Player p2 ON t.Runner_up = p2.Id
+            player p2 ON t.Runner_up = p2.Id
         JOIN 
-            Slam s ON s.Code = t.slam_ref
+            slam s ON s.Code = t.slam_ref
         WHERE CONCAT(p1.first_name, ' ', p1.last_name) = ? OR CONCAT(p2.first_name, ' ', p2.last_name) = ?
         ORDER BY t.slam_year DESC, FIELD(t.slam_ref, 'USO', 'WIM', 'RG', 'AO')";
 
