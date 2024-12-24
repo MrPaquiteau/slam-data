@@ -85,9 +85,7 @@ if (isset($_GET['slam']) && array_key_exists($_GET['slam'], $slams)) {
         <tr>
             <th>Year</th>
             <th>Champion</th>
-            <th>Seed Champion</th>
             <th>Finalist</th>
-            <th>Seed Finalist</th>
             <th>Score</th>
         </tr>
         <?php
@@ -118,10 +116,8 @@ if (isset($_GET['slam']) && array_key_exists($_GET['slam'], $slams)) {
         foreach ($rows as $row) :?>
             <tr>
                 <td><?php echo $row['slam_year'];?></td>
-                <td><?php echo $row['Champion'];?> <img src="<?php echo $slamtrophy;?>" alt="" width="30" height="35"></td>
-                <td><?php echo $row['Seed_Champion'];?></td>
-                <td><?php echo $row['RunnerUp'];?></td>
-                <td><?php echo $row['Seed_Runner_up'];?></td>
+                <td><?php echo $row['Champion'];?><?php if ($row['Seed_Champion'] != 0) echo ' (' . $row['Seed_Champion'] . ')'; ?> <img src="<?php echo $slamtrophy;?>" alt="" width="30" height="35"></td>
+                <td><?php echo $row['RunnerUp'];?><?php if ($row['Seed_Runner_up'] != 0) echo ' (' . $row['Seed_Runner_up'] . ')'; ?></td>
                 <td><?php echo $row['Final_Score'];?></td>
             </tr>
         <?php endforeach;?>

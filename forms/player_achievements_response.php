@@ -126,7 +126,7 @@ $results2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
             <th>Year</th>
             <th>Champion</th>
             <th>Score</th>
-            <th>Runner-Up</th>
+            <th>Finalist</th>
             <th>Slam</th>
         </tr>
         <?php
