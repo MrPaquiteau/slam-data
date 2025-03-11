@@ -3,6 +3,7 @@
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Data Source](#data-source)
@@ -12,8 +13,8 @@
   - [Option 1: With Docker](#option-1-with-docker)
   - [Option 2: Without Docker](#option-2-without-docker)
 - [Installation](#installation)
-  - [Clone the Repository](#1-clone-the-repository)
-  - [Installation Methods](#2-installation-methods)
+  - [1. Clone the Repository](#1-clone-the-repository)
+  - [2. Installation Methods](#2-installation-methods)
     - [Option A: Docker Installation](#option-a-docker-installation)
     - [Option B: Local Server Installation](#option-b-local-server-installation)
 - [Usage](#usage)
@@ -64,11 +65,11 @@ All the data used in this project has been sourced from the platform **Kaggle**.
 ```
  📦SlamData
  ┣ 📂css
- ┃ ┣ ✏️about.css
- ┃ ┣ ✏️index.css
- ┃ ┣ ✏️player_data.css
- ┃ ┣ ✏️player_form.css
- ┃ ┗ ✏️slams.css
+ ┃ ┣ 🎨about.css
+ ┃ ┣ 🎨index.css
+ ┃ ┣ 🎨player_data.css
+ ┃ ┣ 🎨player_form.css
+ ┃ ┗ 🎨slams.css
  ┣ 📂data
  ┃ ┣ 📄Australian Open Men's Singles,1969 - 2021.csv
  ┃ ┣ 📄French Open Men's Singles,1968 - 2021.csv
